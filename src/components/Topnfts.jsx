@@ -11,7 +11,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 position: relative;
-overflow: hidden;
+/* overflow: hidden; */
 `
 
 const Header = styled.h1`
@@ -76,7 +76,7 @@ padding: 250px 0px 0px 201px;
 justify-content: flex-end;
 align-items: center;
 position: absolute;
-top:100px;
+top:200px;
 left:20px;
 z-index: 1;
 `
@@ -84,7 +84,7 @@ z-index: 1;
 
 const Topnfts = () => {
     return (
-        <Container>
+        <Container id='section01'>
             <Gradient01></Gradient01>
             <Left>
                 <motion.div

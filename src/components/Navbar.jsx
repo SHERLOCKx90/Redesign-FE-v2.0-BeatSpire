@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
+import { Link } from 'react-router-dom';
 const Container = styled.div`
 /* border: 1px solid red; */
 width: 100%;
@@ -23,6 +23,8 @@ list-style-type: none;
 `;
 const NavItem = styled.li`
 color:white;
+text-decoration: none;
+font-family: Poppins;
 &:hover {
   /* border: 1px solid blue; */
   padding:10px;
@@ -89,10 +91,10 @@ const Navbar = () => {
       <Nav>
         <NavLogo><Img src='../../logo.svg' /></NavLogo>
         <NavMenu>
-          <NavItem>Home</NavItem>
-          <NavItem>Artists</NavItem>
-          <NavItem>Market Place</NavItem>
-          <NavItem>Social Good</NavItem>
+          <Link to='/'><NavItem>Home</NavItem></Link>
+          <Link to='/artist'><NavItem>Artists</NavItem></Link>
+          <Link to='/marketplace'><NavItem>Market Place</NavItem></Link>
+          <Link to='/socialgood'><NavItem>Social Good</NavItem></Link>
         </NavMenu>
         <ConnectContainer>
           <Img src='../../metamask.svg' />

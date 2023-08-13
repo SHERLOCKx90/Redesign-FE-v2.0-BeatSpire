@@ -13,29 +13,32 @@ align-items: center;
 flex-direction: column;
 position: relative;
 `
+// blue-gradient
 const Gradient01 = styled.div`
-background: rgba(71, 253, 209, 0.71);
-filter: blur(200px);
-height: 100px;
-width: 100px;
+background: rgba(85, 71, 253, 0.90);
+filter: blur(300px);
+height: 400px;
+width: 400px;
 display: inline-flex;
 padding: 250px 0px 0px 201px;
 justify-content: flex-end;
 align-items: center;
 position: absolute;
-top:400px;
-left:500px;
-z-index: 1;`
+top:200px;
+left:1000px;
+z-index: 1;
+`
 
+// green-gradient
 const Gradient02 = styled.div`
 position: absolute;
 width: 510px;
 height: 389px;
 flex-shrink: 0;
 top: 20px;
-background: rgba(85, 71, 253, 0.90);
+background:rgba(71, 253, 209, 0.71);
 filter: blur(250px);
-right:600px;`
+right:1000px;`
 
 const Header = styled.h1`
 z-index: 1000;

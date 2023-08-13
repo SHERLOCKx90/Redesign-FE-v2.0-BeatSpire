@@ -11,10 +11,11 @@ const GlobalStyle = createGlobalStyle`
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-y: scroll;
+    overflow-x: hidden;
     color: black;
     /* background-color: white;  */
     scrollbar-width: none;
-    margin: 0px;
+    ${'' /* margin: 0px; */}
     width: 100%;
     &::-webkit-scrollbar {
       display: none;
