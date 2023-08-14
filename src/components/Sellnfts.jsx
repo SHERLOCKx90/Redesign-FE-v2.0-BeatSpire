@@ -11,6 +11,16 @@ justify-content: center;
 align-items: center;
 flex-direction: row;
 position: relative;
+
+@media screen and (max-width: 768px){
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    width: 100vw;
+    /* position: relative; */
+}
 `
 // green gradient
 const Gradient01 = styled.div`
@@ -26,6 +36,10 @@ position: absolute;
 top:800px;
 left:20px;
 z-index: 1;
+
+@media screen and (max-width: 768px){
+    /* display: none; */
+}
 `
 
 // blue gradient
@@ -38,7 +52,10 @@ top: 500px;
 right:50px;
 background: rgba(85, 71, 253, 0.90);
 filter: blur(250px);
-/* right:300px; */
+
+@media screen and (max-width: 768px){
+    /* display: none; */
+}
 `
 const Header = styled.h1`
 z-index: 1000;
@@ -48,6 +65,12 @@ font-size: 100px;
 font-style: normal;
 font-weight: 500;
 line-height: 110px; /* 100% */
+
+@media screen and (max-width: 768px){
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+}
 `
 const Span = styled.span`
 margin-left: 10px;
@@ -67,12 +90,25 @@ border-radius: 60px;
     transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
     cursor: pointer;
 }
+
+@media screen and (max-width: 768px){
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+}
 `
 
 const Left = styled.div`
 z-index: 1000;
 /* border: 1px solid white; */
-margin-right: 100px;`
+margin-right: 100px;
+
+@media screen and (max-width: 768px){
+    margin: 500px 0px 100px;
+    position: relative;
+    z-index: 1;
+}
+`
 
 const Right = styled.div`
 /* border: 1px solid white; */
@@ -82,6 +118,17 @@ z-index: 1000;
 display: flex;
 flex-direction: column;
 justify-content: center;
+
+@media screen and (max-width: 768px){
+    margin-top: 0px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+}
 `
 
 const Tagline = styled.p`
@@ -96,7 +143,14 @@ font-family: Poppins;
 font-size: 20px;
 font-style: normal;
 font-weight: 500;
-line-height: normal;`
+line-height: normal;
+
+
+@media screen and (max-width: 768px){
+    width: 400px;
+    text-align: center;
+    margin-top: 20px;
+}`
 
 
 const Button = styled.button`
@@ -118,6 +172,16 @@ z-index: 1001;
   transform: scale(1.1);
   transition: transform 1s ease-in-out;
   color: black;
+}
+
+@media screen and (max-width: 768px){
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.1);
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 `
 const Morenfts = () => {

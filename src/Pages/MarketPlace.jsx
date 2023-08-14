@@ -158,7 +158,7 @@ const MarketPlace = () => {
   return (
     <MainLayout>
       <Gradient01></Gradient01>
-      <Container>
+      <Container id='market-01'>
         <Card>
           <Left>
             <motion.div

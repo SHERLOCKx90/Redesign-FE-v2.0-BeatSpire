@@ -22,6 +22,12 @@ font-size: 100px;
 font-style: normal;
 font-weight: 500;
 line-height: 100px; /* 100% */
+
+@media screen and (max-width: 768px){
+    text-align: center;
+    font-size: 70px;
+    line-height: 80px;
+}
 `
 const Span = styled.span`
 margin-left: 10px;
@@ -48,6 +54,13 @@ font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
+
+@media screen and (max-width: 768px){
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+}
 `
 const Left = styled.div`
 /* border:1px solid white; */
@@ -64,6 +77,10 @@ width: 1080px;
 display: flex;
 justify-content: center;
 
+@media screen and (max-width: 768px){
+   display: none;
+}
+
 `
 
 const Gradient01 = styled.div`
@@ -79,6 +96,13 @@ position: absolute;
 top:200px;
 left:20px;
 z-index: 1;
+
+@media screen and (max-width: 768px){
+    /* display: none; */
+    height: 100px;
+    width: 100px;
+    filter: blur(200px);
+}
 `
 
 

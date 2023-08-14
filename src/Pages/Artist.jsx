@@ -129,7 +129,7 @@ const Artist = () => {
   return (
     <MainLayout>
       <Gradient01></Gradient01>
-      <Container>
+      <Container id='artist-01'>
         <Card>
           <Left>
             <motion.div

@@ -12,6 +12,16 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 position: relative;
+
+@media screen and (max-width: 768px){
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  /* margin-top: 100px; */
+}
 `
 // blue-gradient
 const Gradient01 = styled.div`
@@ -44,9 +54,21 @@ const Header = styled.h1`
 z-index: 1000;
 font-size: 100px;
 font-weight: 500;
+
+@media screen and (max-width: 768px){
+  font-size: 100px;
+  font-weight: 00;
+  margin-top: 30rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
 `
 const Span = styled.span`
 margin-left: 10px;
+
+@media screen and (max-width: 768px){
+  display: none;
+}
 `
 
 const Img = styled.img`

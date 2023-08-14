@@ -14,6 +14,11 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 position: relative;
+
+
+@media screen and (max-width: 768px){
+    margin-top: 500px;
+}
 `
 // green gradient
 const Gradient01 = styled.div`
@@ -29,6 +34,13 @@ position: absolute;
 top:300px;
 left:700px;
 /* z-index: 1; */
+
+@media screen and (max-width: 768px){
+    left: 10px;
+    height: 100px;
+    width: 100px;
+    filter: blur(200px);
+}
 `
 
 // blue gradient
@@ -42,6 +54,9 @@ background: rgba(85, 71, 253, 0.90);
 filter: blur(250px);
 right:600px;
 /* z-index: 1; */
+
+@media screen and (max-width: 768px){
+    display: none;
 `
 const Header = styled.h1`
 z-index: 1000;
@@ -52,6 +67,13 @@ font-style: normal;
 font-weight: 500;
 line-height: 110px;
 margin-top:20px;
+
+@media screen and (max-width: 768px){
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    margin-bottom: 100px;
+}
 `
 const Span = styled.span`
 margin-left: 10px;
@@ -61,14 +83,25 @@ z-index: 1000;
 `
 const Para = styled.p`
 color: black;
-font-family: Poppins;`
+font-family: Poppins;
+
+@media screen and (max-width: 768px){
+    font-size: 30px;
+    /* text-align: center; */
+}
+`
 
 const Head = styled.h2`
 color: black;
 font-family: Poppins;
 font-size: 70px;
 /* font-style: normal; */
-font-weight: 800;`
+font-weight: 800;
+
+@media screen and (max-width: 768px){
+    font-size: 20px;    
+}
+`
 
 
 const Morenfts = () => {

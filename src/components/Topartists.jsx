@@ -11,6 +11,10 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 position: relative;
+
+@media screen and (max-width: 768px){
+    margin-top: 200px;
+}
 `
 // green gradient
 const Gradient01 = styled.div`
@@ -38,6 +42,10 @@ top: 200px;
 background: rgba(85, 71, 253, 0.90);
 filter: blur(250px);
 right:300px;
+
+@media screen and (max-width: 768px){
+    display: none;
+}
 `
 const Header = styled.h1`
 z-index: 1000;
@@ -47,6 +55,12 @@ font-size: 100px;
 font-style: normal;
 font-weight: 500;
 line-height: 110px; /* 100% */
+
+@media screen and (max-width: 768px){
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 150px;
+}
 `
 const Span = styled.span`
 margin-left: 10px;
@@ -66,6 +80,11 @@ width: 400px;
   transform: scale(1.05);
     transition: transform 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    width: 300px;
+    height: 115px;
 }
 `
 
@@ -114,13 +133,27 @@ z-index: 1001;
   transition: transform 1s ease-in-out;
   color: black;
 }
+
+@media screen and (max-width: 768px){
+    margin-top: 100px;
+    z-index: -1;
+}
 `
 
 const Gallery = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-flex-direction: column;`
+flex-direction: column;
+
+@media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px;
+    margin-inline: 50px;
+}`
 
 const Morenfts = () => {
     return (

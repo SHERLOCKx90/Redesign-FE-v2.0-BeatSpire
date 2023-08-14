@@ -239,7 +239,7 @@ const SocialGood = () => {
   return (
     <MainLayout>
       <Gradient01></Gradient01>
-      <Container>
+      <Container id='social-01'>
         <Card>
         </Card>
         <Header2>Let Music Heal you<Span><Img src='../../../circle.svg' /></Span></Header2>
