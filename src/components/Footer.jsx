@@ -67,7 +67,7 @@ display: flex;
 const SiteLinks = styled.div`
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: flex-start;
 flex-direction: row;
 position: relative;
 `
@@ -118,6 +118,12 @@ font-family: Poppins;
 }`
 
 const SubLinks = styled.div`
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: column;
+position: relative;
+margin-top: 1rem;
 
 @media screen and (max-width: 768px){
   display: flex;
@@ -194,27 +200,27 @@ const Footer = () => {
             </Link>
             <Link>Artist
               <SubLinks>
-                <SubLink><Linkage href='#section01'>Experiece Music  & <br />NFTs</Linkage></SubLink>
-                <SubLink><Linkage href='#section02'>Top NFTs </Linkage></SubLink>
-                <SubLink><Linkage href='#section03'>Sell your <br />NFTs</Linkage></SubLink>
+                <SubLink><Linkage href='#section01'>Experiece Top <br /> Artists</Linkage></SubLink>
+                <SubLink><Linkage href='#section02'>Connect Wallet <br /> to get started</Linkage></SubLink>
+                {/* <SubLink><Linkage href='#section03'>Sell your <br />NFTs</Linkage></SubLink>
                 <SubLink><Linkage href='#section04'>Create your <br />NFTs</Linkage></SubLink>
-                <SubLink><Linkage href='#section05'>Top Artists</Linkage></SubLink>
+                <SubLink><Linkage href='#section05'>Top Artists</Linkage></SubLink> */}
               </SubLinks></Link>
             <Link>Market Place
               <SubLinks>
-                <SubLink><Linkage href='#section01'>Experiece Music  & <br />NFTs</Linkage></SubLink>
-                <SubLink><Linkage href='#section02'>Top NFTs </Linkage></SubLink>
-                <SubLink><Linkage href='#section03'>Sell your <br />NFTs</Linkage></SubLink>
+                <SubLink><Linkage href='#section01'>Place Bid</Linkage></SubLink>
+                <SubLink><Linkage href='#section02'>Explore All <br />NFTs </Linkage></SubLink>
+                {/* <SubLink><Linkage href='#section03'>Sell your <br />NFTs</Linkage></SubLink>
                 <SubLink><Linkage href='#section04'>Create your <br />NFTs</Linkage></SubLink>
-                <SubLink><Linkage href='#section05'>Top Artists</Linkage></SubLink>
+                <SubLink><Linkage href='#section05'>Top Artists</Linkage></SubLink> */}
               </SubLinks></Link>
             <Link>Social Good
               <SubLinks>
-                <SubLink><Linkage href='#section01'>Experiece Music  & <br />NFTs</Linkage></SubLink>
-                <SubLink><Linkage href='#section02'>Top NFTs </Linkage></SubLink>
-                <SubLink><Linkage href='#section03'>Sell your <br />NFTs</Linkage></SubLink>
+                <SubLink><Linkage href='#section01'>Let Music Heal <br />you</Linkage></SubLink>
+                <SubLink><Linkage href='#section02'>Coming Soon</Linkage></SubLink>
+                {/* <SubLink><Linkage href='#section03'>Sell your <br />NFTs</Linkage></SubLink>
                 <SubLink><Linkage href='#section04'>Create your <br />NFTs</Linkage></SubLink>
-                <SubLink><Linkage href='#section05'>Top Artists</Linkage></SubLink>
+                <SubLink><Linkage href='#section05'>Top Artists</Linkage></SubLink> */}
               </SubLinks></Link>
           </SiteLinks>
         </SiteContainer>

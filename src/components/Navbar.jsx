@@ -127,6 +127,7 @@ const NavLogo = styled.div`
 margin-right: 10px;
 height: 50px;
 width: 50px;
+padding-top: 10px;
 
 @media screen and (max-width: 768px){
   margin-right: 4rem;
@@ -143,8 +144,8 @@ width: 50px;
 `;
 
 const Img = styled.img`
-height: 100%;
-width: 100%;
+height: 40px;
+width: 40px;
 
 &:hover{
   /* width: 100%; */
@@ -167,7 +168,7 @@ height: 50px;
 width: max-content;
 margin-left: 50px;
 /* border: 1px solid red; */
-padding:10px;
+padding:10px 20px;
 border-radius: 50px 0px 50px 50px;
 &:hover Span{
   display: block;
