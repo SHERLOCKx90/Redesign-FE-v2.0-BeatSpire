@@ -61,6 +61,13 @@ margin-bottom: 20px;
 text-align: left;
 font-family: Poppins;
 color: white;
+
+@media screen and (max-width: 768px) {
+  font-size: 80px;
+  margin-top: 0;
+  width: min-content;
+  text-align: center;
+}
 `
 const Header2 = styled.h1`
 background: linear-gradient(88deg, #FA5F4C 0%, #994CDB 37.60%, #4B72DC 63.54%, #3FC9FE 100%);
@@ -73,6 +80,11 @@ line-height: 1.2;
 margin-bottom: 40px;
 text-align: left;
 font-family: Poppins;
+
+@media screen and (max-width: 768px) {
+  font-size: 30px;
+  margin-top: 0;
+}
 `
 
 const Tag = styled.p`
@@ -98,6 +110,14 @@ flex-direction: row;
 /* position: relative; */
 z-index: 2;
 overflow: hidden;
+
+@media screen and (max-width: 768px) {
+  object-fit: contain;
+  width: 80%;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: center;
+}
 `
 
 const Button = styled.button`
@@ -118,6 +138,10 @@ const Button = styled.button`
     border:none;
     background-color: #07CF9E;
     color: black;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
   }
 `
 const Button2 = styled.button`
@@ -167,6 +191,11 @@ flex-direction: column;
 const Img = styled.img`
 height: 30px;
 width: 30px;
+
+@media screen and (max-width: 768px) {
+  height: 20px;
+  width: 20px;
+}
 `
 const TextSocial = styled.div`
 color: white;
@@ -225,6 +254,10 @@ font-family: Poppins;
 font-weight: 500;
 font-size: 1.5rem;
 text-align: center;
+
+@media screen and (max-width: 768px) {
+  font-size: 20px;
+}
 `
 const Span = styled.span`
 margin-left: 5px;

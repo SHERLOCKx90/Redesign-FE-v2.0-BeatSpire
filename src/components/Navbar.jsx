@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 
 
@@ -16,7 +16,8 @@ position: fixed;
 z-index: 999;
 
 @media screen and (max-width: 768px){
-  height: 300px;
+  display: none;
+  /* max-height: 200px; */
   width: 100%;
   display: flex;
   position: fixed;
@@ -26,10 +27,26 @@ z-index: 999;
   z-index: 999;
   background-color: #1F2350;
   padding: 30px 10px;
+
+  &.open{
+    /* transform: translateY(0.1%);
+    transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1); */
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 90%;
+      color: black;
+      text-decoration: no;
+    }
+  }
 }`;
 
-const StyledFontAwesomeIcon = styled(FaBars)`
-position: absolute;
+const StyledFontAwesomeIcon = styled(FaTimes)`
+z-index: 1000;
+position: fixed;
 display: none;
 top: 20px;
 right: 30px;
@@ -49,16 +66,12 @@ list-style-type: none;
 /* border: 1px solid green; */
 
 @media screen and (max-width: 768px){
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  line-height: auto;
-  text-align: center;
-  /* background-color: green; */
-  text-decoration: none;
+  display: none;
+  /* position: absolute; */
 }
 `;
+
+
 const NavItem = styled.li`
 color:white;
 text-decoration: none;
@@ -124,7 +137,7 @@ width: 50px;
     cursor: pointer;
     transform: scale(1.6);
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    margin-top: 20px;
+    margin: 20px 0px;
   }
 }
 `;
@@ -150,7 +163,7 @@ const ConnectContainer = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-height: 30px;
+height: 50px;
 width: max-content;
 margin-left: 50px;
 /* border: 1px solid red; */
@@ -193,17 +206,29 @@ display: none;
   text-align: left;
 }`
 
+const NavbarToggle = styled.button`
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+`;
 
 const Navbar = () => {
 
   const [active, setActive] = useState(false);
+
+  const toggleActive = () => {
+    setActive(!active);
+  }
   return (
-    <Container>
-      <Nav active={active}>
+    <Container className={active ? 'open' : ''}>
+      <Nav>
         <NavLogo><Img src='../../logo.svg' /></NavLogo>
-        <StyledFontAwesomeIcon onClick={() => {
-          setActive(!active);
-        }}/>
+        <StyledFontAwesomeIcon onClick={toggleActive} />
+        {/* <NavbarToggle onClick={toggleActive}>
+          <i className={active ? 'fas fa-times' : 'fas fa-bars'}></i>
+        </NavbarToggle> */}
         <NavMenu>
           <Link to='/'><NavItem>Home</NavItem></Link>
           <Link to='/artist'><NavItem>Artists</NavItem></Link>
@@ -213,7 +238,7 @@ const Navbar = () => {
         <ConnectContainer>
           <Img src='../../metamask.svg' />
           <Span>
-            Connect Wallet
+            Connect <br />Wallet
           </Span>
         </ConnectContainer>
       </Nav>

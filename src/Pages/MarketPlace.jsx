@@ -74,6 +74,14 @@ flex-direction: row;
 /* position: relative; */
 z-index: 2;
 overflow: hidden;
+
+@media screen and (max-width: 768px){
+    margin-top: 20rem;
+  flex-direction: column;
+  width: 80vw;
+  height: 80vh;
+  padding: 50px 20px;
+}
 `
 
 const Button = styled.button`
@@ -203,11 +211,11 @@ const MarketPlace = () => {
             </motion.div>
           </Left>
           <Right>
-          <Img src='../../headphone.png'/>
+            <Img src='../../headphone.png' />
           </Right>
         </Card>
       </Container>
-      <Footer/>
+      <Footer />
       <Gradient02></Gradient02>
     </MainLayout>
   )

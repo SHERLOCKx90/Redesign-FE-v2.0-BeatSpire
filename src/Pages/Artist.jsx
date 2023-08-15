@@ -69,6 +69,14 @@ flex-direction: row;
 /* position: relative; */
 z-index: 2;
 overflow: hidden;
+
+@media screen and (max-width: 768px) {
+  margin-top: 20rem;
+  flex-direction: column;
+  width: 80vw;
+  height: 80vh;
+  padding: 20px;
+}
 `
 
 const Button = styled.button`
